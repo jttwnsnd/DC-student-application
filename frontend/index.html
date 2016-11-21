@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Student Application</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="shortcut icon" href="http://www.digitalcrafts.com/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body ng-app="DigitalCrafts">
+
+    <div class="container">
+      <div class="nav">
+        <img src="http://www.digitalcrafts.com/sites/all/themes/digitalcrafts/images/digitalcrafts-site-logo.png" alt="logo" class="logo" />
+        <ul class="nav nav-pills">
+          <li><a href="" ng-click="login()" ng-hide="isLoggedIn() || currentPage == ''">Login</a></li>
+          <li><a href="" ng-click="signup()" ng-hide="isLoggedIn() || currentPage == 'signup'">Register</a></li>
+          <!-- <li><a href="" ng-click="adminDash()" ng-show="userIsAdmin">Admin Dashboard</a></li> -->
+          <li><a href="" ng-click="logout()" ng-show="isLoggedIn()">Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col col-xs-12 col-sm-10 col-sm-offset-1">
+          <ng-view autoscroll="true"></ng-view>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/angular/angular.min.js"></script>
+    <script src="js/vendor/angular/angular-route.js"></script>
+    <script src="js/vendor/angular/angular-cookies.js"></script>
+    <script src="js/vendor/angular/Chart.min.js"></script>
+    <script src="js/vendor/angular/angular-chart.min.js"></script>
+    <script src="js/vendor/ng-file-upload/ng-file-upload-shim.js"></script>
+    <script src="js/vendor/ng-file-upload/ng-file-upload.js"></script>
+    <script src="js/vendor/ace/ace.js"></script>
+    <script src="js/vendor/ace/ui-ace.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config/config.js"></script>
+    <script src="js/config/run.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/signupController.js"></script>
+    <script src="js/controllers/changeController.js"></script>
+    <script src="js/controllers/resetController.js"></script>
+    <script src="js/controllers/page2Controller.js"></script>
+    <script src="js/controllers/adminController.js"></script>
+    <script src="js/controllers/scheduleController.js"></script>
+    <script src="js/controllers/codeController.js"></script>
+    <script src="js/controllers/completeController.js"></script>
+    <script src="js/factories/backend.js"></script>
+    <script src="js/services/user.js"></script>
+    <script src="js/vendor/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+
+  </body>
+</html>
