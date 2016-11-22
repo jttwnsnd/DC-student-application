@@ -38,7 +38,7 @@ app.controller('LoginController', function($scope, $http, $location, $rootScope,
   };
 
   $scope.registration = function(){
-    $location.path("/signup");
+    $location.path("/");
   };
 
   $scope.forgotPassword = function() {
