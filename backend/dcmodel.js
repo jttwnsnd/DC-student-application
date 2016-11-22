@@ -34,6 +34,9 @@ var User = mongoose.model('User', {
   codeChallengeCompleted: { type: Boolean, default: false },
   codeChallengeCompletedDate: { type: Date, default: null },
   codeChallengeAnswers: {
+    /*
+    reset these values to false and 0 for prod
+    */
     '1': { type: Boolean, default: false },
     '2': { type: Boolean, default: false },
     '3': { type: Boolean, default: false },

@@ -6,12 +6,19 @@ app.controller('CompleteController', function($cookies, $http, $scope, $location
   backend.getData(userToken).then(function(userData) {
     var data = userData.data.message;
 
-    // if Code Challenge completed, redirect
-    if (data.codeChallengeCompleted) {
-      $location.path('/schedule');
-    } else if (data.pageLastCompleted !== 4) {
-      $location.path('/page2');
-    }
+    // // if Code Challenge completed, redirect
+    // if (data.codeChallengeCompleted) {
+    //   $location.path('/schedule');
+    // } else if (data.pageLastCompleted !== 4) {
+    //   $location.path('/page2');
+    // }
+
+    //Dev version, we will be skipping the coding challenge.
+    // if (data.codeChallengeCompleted) {
+    //   $location.path('/finish');
+    // } else if (data.pageLastCompleted !== 4) {
+    //   $location.path('/page2');
+    // }
 
     // if the user ended back on the complete page after an email
     // has already been sent, don't send the email again
@@ -29,6 +36,10 @@ app.controller('CompleteController', function($cookies, $http, $scope, $location
 
   $scope.codeChallenge = function() {
     $location.path('/codechallenge');
+  };
+
+  $scope.skipChallenge = function() {
+    $location.path('/finish');
   };
 
 });

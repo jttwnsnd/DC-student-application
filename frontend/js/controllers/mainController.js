@@ -7,13 +7,23 @@ app.controller('MainController', function($scope, $rootScope, User, $location, U
     var data = userData.data.message;
 
     //if application completed, redirect
-    if (data.applicationCompleted) {
-      $location.path('/complete');
-    } else if ($rootScope.currentPage === 'page3' && data.pageLastCompleted !== 2) {
-      $location.path('/page2');
-    } else if ($rootScope.currentPage === 'page4' && data.pageLastCompleted !== 3) {
-      $location.path('/page3');
-    }
+    // if (data.applicationCompleted) {
+    //   $location.path('/complete');
+    // } else if ($rootScope.currentPage === 'page3' && data.pageLastCompleted !== 2) {
+    //   $location.path('/page2');
+    // } else if ($rootScope.currentPage === 'page4' && data.pageLastCompleted !== 3) {
+    //   $location.path('/page3');
+    // }
+
+    //dev version, redirect to finish.
+    //if application completed, redirect
+    // if (data.applicationCompleted) {
+    //   $location.path('/finish');
+    // } else if ($rootScope.currentPage === 'page3' && data.pageLastCompleted !== 2) {
+    //   $location.path('/page2');
+    // } else if ($rootScope.currentPage === 'page4' && data.pageLastCompleted !== 3) {
+    //   $location.path('/page3');
+    // }
 
     $scope.firstname = data.firstname;
     $scope.lastname = data.lastname;

@@ -1,3 +1,4 @@
-/node_modules
+backend/node_modules/*
 creds.json
 .DS_Store
+npm-debug.log
