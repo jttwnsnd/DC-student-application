@@ -63,11 +63,11 @@ app.run(function($rootScope, $location, $cookies, backend, $window) {
     };
 
     $rootScope.login = function() {
-      $location.path('/');
+      $location.path('/login');
     };
 
     $rootScope.signup = function() {
-      $location.path('/signup');
+      $location.path('/');
     };
 
   });

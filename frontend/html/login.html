@@ -12,10 +12,10 @@
       <input ng-model="password" type="password" name="password" class="form-control input-lg" required>
     </div>
     <div ng-show="loginFailed" class="alert alert-danger">Incorrect Username or Password.</div>
-    <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid">Login</button>
-    <button class="btn btn-default" ng-click="forgotPassword()" type="button">Forgot Password?</button>
-    <div class="alert alert-info">Don't have an account? <button class="btn btn-primary" ng-click="registration()" type="button">Register</button></div>
-    
+    <button type="submit" class="registerBtn" ng-disabled="loginForm.$invalid">Login</button>
+    <button class="forgotBtn" ng-click="forgotPassword()" type="button">Forgot Password?</button>
+    <div>Don't have an account? <button class="loginBtn" ng-click="registration()" type="button">Register</button></div>
+
   </form>
 
 </div>
