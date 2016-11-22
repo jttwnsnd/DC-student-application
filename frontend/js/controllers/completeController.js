@@ -1,5 +1,5 @@
 // controller for when application is complete/submitted
-app.controller('CompleteController', function($cookies, $http, $scope, $location, backend) {
+app.controller('CompleteController', function($cookies, $http, $scope, $location, $window, backend) {
 
   // load data from backend
   var userToken = $cookies.get('token');
@@ -35,11 +35,13 @@ app.controller('CompleteController', function($cookies, $http, $scope, $location
   });
 
   $scope.codeChallenge = function() {
-    $location.path('/codechallenge');
+    // $location.path('/codechallenge');
+    $window.open('https://repl.it/classroom/invite/ejirOc', '__blank');
   };
 
-  $scope.skipChallenge = function() {
-    $location.path('/finish');
+  $scope.scheduleCalendy = function() {
+    // $location.path('/finish');
+    $window.open('https://calendly.com/digitalcrafts-global', '__blank');
   };
 
 });

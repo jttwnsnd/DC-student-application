@@ -20,6 +20,11 @@ a{
   color: #5697CF;
 }
 
+input[type]:focus, textarea[name]:focus{
+  box-shadow: 0 0 6px #F8941D;
+  border: 1px #F8941D solid;
+}
+
 .created {
   text-align: center;
   font-size: 12px;
@@ -103,7 +108,7 @@ a{
 }
 
 .challengeBtn, .skipBtn, .loginBtn, .registerBtn, .forgotBtn {
-  font-size: 12px;
+  font-size: 13px;
   margin: 20px auto;
   padding: 15px 30px;
   box-shadow: 1px 1px 1px black;
