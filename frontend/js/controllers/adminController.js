@@ -26,6 +26,17 @@ app.controller('AdminController', function($scope, $cookies, $rootScope, $locati
         $location.path('/');
       }
     });
+  $scope.updateTheData = function() {
+    var theData = User.getData();
+    theData.applicationCompleted;
+    theData.applicationCompletedDate;
+    theData.codeChallengeCompleted;
+    theData.interviewScheduled;
+    theData.interviewScheduledDate;
+
+    User.saveData(theData);
+    backend.sendData(theData);
+  }
 
   $scope.dateRangeFilter = function(startDate, endDate) {
 
@@ -68,6 +79,10 @@ app.controller('AdminController', function($scope, $cookies, $rootScope, $locati
     return Object.
       keys(filterObj).
       every(function (key) { return !filterObj[key]; });
+  }
+
+  function editUsers(index){
+    console.log(users[$index]);
   }
 
   $scope.sortType = 'applicationCompleted';

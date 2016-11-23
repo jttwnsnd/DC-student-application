@@ -20,9 +20,10 @@ app.controller('LoginController', function($scope, $http, $location, $rootScope,
           $cookies.put('token', response.data.token);
 
           // if user is an admin, redirect to admin page2
-          if (response.data.isAdmin) {
+          if (response.data.isAdmin === true) {
             $location.path('/admin');
           } else {
+            console.log(response.data.isAdmin);
             // redirect to beginning of application
             $location.path('/page2');
           }
