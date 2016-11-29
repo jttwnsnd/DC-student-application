@@ -3,6 +3,7 @@ DigitalCrafts colors:
   green: #5A8836
   blue: #5697CF
   orange: #F8941D
+  gray: #BBBDBF
 */
 
 body {
@@ -11,8 +12,23 @@ body {
 }
 
 form {
-  border: 1px solid #d4cfcf;
+  border: 0px solid #d4cfcf;
   padding: 15px;
+}
+
+a{
+  color: #5697CF;
+}
+
+input[type]:focus, textarea[name]:focus{
+  box-shadow: 0 0 6px #F8941D;
+  border: 1px #F8941D solid;
+}
+
+.created {
+  text-align: center;
+  font-size: 12px;
+  transform: translateY(50px);
 }
 
 .alert {
@@ -91,6 +107,51 @@ form {
   padding: 5px;
 }
 
-.challengeBtn {
+.challengeBtn, .skipBtn, .loginBtn, .registerBtn, .forgotBtn {
+  font-size: 13px;
   margin: 20px auto;
+  padding: 15px 30px;
+  box-shadow: 1px 1px 1px black;
+  border-radius: 0px;
+  border: 1px #5A8836 solid;
+  color: #5A8836;
+  background-color: #fff;
+  transition: .3s all ease;
+}
+
+.loginBtn, .forgotBtn {
+  margin: 0px 10px;
+  padding: 10px 30px;
+}
+.registerBtn{
+  padding: 10px 30px;
+}
+.registerBtn:hover {
+  border: 1px #5697CF solid;
+  background-color: #5697CF;
+  color: #fff;
+}
+.loginBtn:hover {
+  border: 1px #5697CF solid;
+  background-color: #5697CF;
+  color: #fff;
+}
+.forgotBtn:hover {
+  border: 1px #F8941D solid;
+  background-color: #F8941D;
+  color: #fff;
+}
+
+.challengeBtn:hover {
+  margin: 20px auto;
+  border: 1px #5A8836 solid;
+  background-color: #5A8836;
+  color: #fff
+}
+
+.skipBtn:hover {
+  margin: 20px auto;
+  border: 1px #F8941D solid;
+  background-color: #F8941D;
+  color: #fff
 }

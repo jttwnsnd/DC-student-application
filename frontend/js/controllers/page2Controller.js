@@ -27,9 +27,9 @@ app.controller('Page2Controller', function($scope, User, $location, Upload, $tim
       var data = userData.data.message;
 
       //if application completed, redirect
-      if (data.applicationCompleted) {
-        $location.path('/complete');
-      }
+      // if (data.applicationCompleted) {
+      //   $location.path('/complete');
+      // }
 
       $scope.firstname = data.firstname;
       $scope.lastname = data.lastname;

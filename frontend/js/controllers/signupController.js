@@ -20,4 +20,7 @@ app.controller('SignupController', function($scope, $location, $http, $timeout, 
         $scope.emailTaken = true;
       });
   };
+  $scope.returnUser = function(){
+    $location.path("/login");
+  };
 });

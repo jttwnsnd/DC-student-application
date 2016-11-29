@@ -1,19 +1,18 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Open+Sans');
+</style>
 <form>
-  <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" style="width: 33%">Application Form</div>
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="border-left: 1px solid black; width: 33%">Code Challenge</div>
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="border-left: 1px solid black; width: 34%">Interview</div>
-  </div>
-
-  <div class="alert alert-success">Thank you for completing the application!</div>
+  <div style="font-family:'Josefin Sans'; font-size:40px; padding:20px 0px 0px">Application completed!</div>
 
   <div>
     <h4>Someone from DigitalCrafts will be in touch with you shortly.</h4>
     <p>In the meantime, please checkout <a href="http://www.digitalcrafts.com" target="_blank">DigitalCrafts</a> for more information.</p>
     <p>We also encourage students to complete as much of <a href="http://www.codecademy.com" target="_blank">CodeAcademy</a> and <a href="http://www.freecodecamp.com" target="_blank">freeCodeCamp</a> as possible!</p>
-    <h4>Your next step in the application process is to complete our code challenge.</h4>
-    <p>Please <a href="img/codechallenge.pdf" target="_blank">click here</a> to view more information about the code challenge before getting started. Once you are comfortable you can go ahead and click below to get coding!</p>
-    <button type="button" class="challengeBtn btn btn-primary" ng-click="codeChallenge()">Complete Code Challenge</button>
+    <h4>Your next steps in the application process are the coding challenge and informal interview.</h4>
+    <p>Please <a href="img/codechallenge.pdf" target="_blank">click here</a> to view more information about the code challenge before getting started. Once you are comfortable you can go ahead and get coding or schedule your informal interview!</p>
+    <!-- <button style="font-family:'Josefin Sans'" type="button" class="skipBtn" ng-click="skipChallenge()">SKIP CODE CHALLENGE</button> -->
+    <button style="font-family:'Josefin Sans'" type="button" class="challengeBtn" ng-click="codeChallenge()">START CODE CHALLENGE</button>
+    <button style="font-family:'Josefin Sans'" type="button" class="skipBtn" ng-click="scheduleCalendy()">SCHEDULE INTERVIEW</button>
 
   </div>
 </form>

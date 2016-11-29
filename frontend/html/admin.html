@@ -57,11 +57,12 @@
       <th><a href="" ng-click="sortType = 'interviewScheduled'; sortReverse = !sortReverse">Interview Scheduled?<span ng-show="sortType == 'interviewScheduled' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span><span ng-show="sortType == 'interviewScheduled' && sortReverse" class="glyphicon glyphicon-triangle-bottom"></span></a></th>
       <th><a href="" ng-click="sortType = 'city'; sortReverse = !sortReverse">Campus<span ng-show="sortType == 'city' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span><span ng-show="sortType == 'city' && sortReverse" class="glyphicon glyphicon-triangle-bottom"></span></a></th>
       <th><a href="" ng-click="sortType = 'cohort'; sortReverse = !sortReverse">Cohort Date<span ng-show="sortType == 'cohort' && !sortReverse" class="glyphicon glyphicon-triangle-top"></span><span ng-show="sortType == 'cohort' && sortReverse" class="glyphicon glyphicon-triangle-bottom"></span></a></th>
+      <th>Edit</th>
     </tr>
   </thead>
   <tbody>
     <!-- dateRangeFilter(appCompleteStart, appCompleteEnd) -->
-    <tr ng-repeat="user in users | filter: filterResults | orderBy:sortType:sortReverse" ng-class="{success: user.applicationCompleted && user.codeChallengeCompleted && user.interviewScheduled}">
+    <tr ng-repeat="user in users | filter: filterResults | orderBy:sortType:sortReverse track by $index" ng-class="{success: user.applicationCompleted && user.codeChallengeCompleted && user.interviewScheduled}">
       <td>{{user.firstname}}</td>
       <td>{{user.lastname}}</td>
       <td>{{user.email}}</td>
@@ -71,6 +72,7 @@
       <td>{{user.interviewScheduled}}</td>
       <td>{{user.city}}</td>
       <td>{{user.cohort}}</td>
+      <td><a ng-click="editUsers($index)">Edit</a></td>
     </tr>
   </tbody>
 </table>

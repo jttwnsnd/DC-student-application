@@ -2,8 +2,8 @@
 app.config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'html/login.html',
-      controller: 'LoginController'
+      templateUrl: 'html/signup.html',
+      controller: 'SignupController'
     })
     .when('/page2', {
       templateUrl: 'html/2.html',
@@ -17,9 +17,9 @@ app.config(function($routeProvider) {
       templateUrl: 'html/4.html',
       controller: 'MainController'
     })
-    .when('/signup', {
-      templateUrl: 'html/signup.html',
-      controller: 'SignupController'
+    .when('/login', {
+      templateUrl: 'html/login.html',
+      controller: 'LoginController'
     })
     .when('/complete', {
       templateUrl: 'html/complete.html',
@@ -44,8 +44,16 @@ app.config(function($routeProvider) {
     .when('/finish', {
       templateUrl: 'html/finish.html'
     })
+    .when('/admin_login', {
+      templateUrl: 'html/admin_login.html',
+      controller: 'LoginController'
+    })
     .when('/admin', {
       templateUrl: 'html/admin.html',
+      controller: 'AdminController'
+    })
+    .when('/admin_edit', {
+      templateUrl: 'html/admin_edit.html',
       controller: 'AdminController'
     })
     .otherwise({redirectTo: '/'});

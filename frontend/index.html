@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Student Application</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -14,8 +15,8 @@
       <div class="nav">
         <img src="http://www.digitalcrafts.com/sites/all/themes/digitalcrafts/images/digitalcrafts-site-logo.png" alt="logo" class="logo" />
         <ul class="nav nav-pills">
-          <li><a href="" ng-click="login()" ng-hide="isLoggedIn() || currentPage == ''">Login</a></li>
-          <li><a href="" ng-click="signup()" ng-hide="isLoggedIn() || currentPage == 'signup'">Register</a></li>
+          <li><a href="" ng-click="login()" ng-hide="isLoggedIn() || currentPage == 'login'">Login</a></li>
+          <li><a href="" ng-click="signup()" ng-hide="isLoggedIn() || currentPage == ''">Register</a></li>
           <!-- <li><a href="" ng-click="adminDash()" ng-show="userIsAdmin">Admin Dashboard</a></li> -->
           <li><a href="" ng-click="logout()" ng-show="isLoggedIn()">Logout</a></li>
         </ul>
@@ -27,6 +28,7 @@
         </div>
       </div>
     </div>
+    <div class="created">Page created by students of DigitalCrafts</div>
 
     <script src="js/vendor/angular/angular.min.js"></script>
     <script src="js/vendor/angular/angular-route.js"></script>
