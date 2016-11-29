@@ -62,7 +62,7 @@
   </thead>
   <tbody>
     <!-- dateRangeFilter(appCompleteStart, appCompleteEnd) -->
-    <tr ng-repeat="user in users | filter: filterResults | orderBy:sortType:sortReverse | track by $index" ng-class="{success: user.applicationCompleted && user.codeChallengeCompleted && user.interviewScheduled}">
+    <tr ng-repeat="user in users | filter: filterResults | orderBy:sortType:sortReverse track by $index" ng-class="{success: user.applicationCompleted && user.codeChallengeCompleted && user.interviewScheduled}">
       <td>{{user.firstname}}</td>
       <td>{{user.lastname}}</td>
       <td>{{user.email}}</td>
@@ -72,7 +72,7 @@
       <td>{{user.interviewScheduled}}</td>
       <td>{{user.city}}</td>
       <td>{{user.cohort}}</td>
-      <td><a href="#">Edit</a></td>
+      <td><a ng-click="editUsers($index)">Edit</a></td>
     </tr>
   </tbody>
 </table>

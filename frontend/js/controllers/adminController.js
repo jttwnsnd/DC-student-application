@@ -81,8 +81,18 @@ app.controller('AdminController', function($scope, $cookies, $rootScope, $locati
       every(function (key) { return !filterObj[key]; });
   }
 
-  function editUsers(index){
-    console.log(users[$index]);
+  $scope.editUsers = function(index){
+    console.log($scope.users[index]);
+    $scope.edit_firstname = $scope.users[index].firstname;
+    $scope.edit_lastname = $scope.users[index].lastname;
+    $scope.edit_email = $scope.users[index].email;
+    $scope.edit_phone = $scope.users[index].phone;
+    $scope.edit_app = $scope.users[index].applicationCompleted;
+    $scope.edit_code = $scope.users[index].codeChallengeCompleted;
+    $scope.edit_interview = $scope.users[index].interviewScheduled;
+    $scope.edit_campus = $scope.users[index].city;
+    $scope.edit_cohort = $scope.users[index].cohort;
+    $location.path('/admin_edit');
   }
 
   $scope.sortType = 'applicationCompleted';
